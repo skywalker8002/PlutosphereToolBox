@@ -5,7 +5,7 @@ And on that note, you can edit it too! (i havent made the format, but its easy t
 I think after v1.1 I will leave it to the community, unless I have a big idea.
 btw this is for plutosphere.com , a VR cloud gaming machine (that if you want to support me you can give me tokens at musicmanrr).
 Other than that, thats all i have to say. Thank you to Deleted User#3823 for the Toolbox begining code and idea.
-`
+~
 @echo off
 	
 cls
@@ -117,4 +117,4 @@ IF ERRORLEVEL 1 GOTO begining
 cls
 echo Press any key to close app.
 pause
- `
+ ~
