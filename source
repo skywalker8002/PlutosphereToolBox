@@ -2,13 +2,12 @@
 	
 cls
 
-echo This was a ToolBox made by user Deleted User#3823 and edited by Music Man#3968. I give full credit for most of the code and the idea of this.
 
-pause
 :begining
 cls
+echo This was a ToolBox made by user 3823#2307 and edited by Music Man#3968. I give full credit for most of the code and the idea of this. (Last Updated on June 21,2022)
 echo Welcome to plutosphere tools! what would you like to install
-echo (1) - Download Parsec
+echo (1) - Close App
 echo (2) - Download Minecraft
 echo (3) - Download Roblox
 echo (4) - Download Virtual Desktop
@@ -16,9 +15,9 @@ echo (5) - Download Spotify
 echo (6) - Download Java
 echo (7) - Download Discord
 echo (8) - Download Mega
-echo (9) - Close
+echo (9) - Download Opera GX
 CHOICE /C 123456789 /M "Enter your choice:"
-If ERRORLEVEL 9 GOTO close
+If ERRORLEVEL 9 GOTO Opera
 IF ERRORLEVEL 8 GOTO Mega
 IF ERRORLEVEL 7 GOTO Discord
 IF ERRORLEVEL 6 GOTO Java
@@ -26,7 +25,16 @@ IF ERRORLEVEL 5 GOTO Spot
 IF ERRORLEVEL 4 GOTO VDSK
 IF ERRORLEVEL 3 GOTO rblx
 IF ERRORLEVEL 2 GOTO mine
-IF ERRORLEVEL 1 GOTO psec 
+IF ERRORLEVEL 1 GOTO close 
+pause
+
+:Opera
+cls
+echo Installing
+curl https://github.com/skywalker8002/PlutosphereToolBox/releases/download/Opera/OperaGXSetup.1.exe -o Opera.exe
+cls
+start mega.exe
+GOTO begining
 
 :Mega
 cls
@@ -34,15 +42,15 @@ echo Installing
 curl https://mega.nz/MEGAsyncSetup64.exe -o mega.exe
 cls
 start mega.exe
-GOTO end
+GOTO begining
 
 :Discord
 cls
 echo Installing
-curl https://dl.discordapp.net/distro/app/stable/win/x86/1.0.9004/DiscordSetup.exe -o discord.exe
+curl https://github.com/skywalker8002/PlutosphereToolBox/releases/download/DiscordDownload/DiscordSetup.exe -o discord.exe
 cls
 start discord.exe
-GOTO end
+GOTO begining
 
 :Java
 cls
@@ -50,7 +58,7 @@ echo Installing
 curl https://javadl.oracle.com/webapps/download/AutoDL?BundleId=246471_2dee051a5d0647d5be72a7c0abff270e -o Java.exe
 cls
 start Java.exe
-GOTO end
+GOTO begining
 
 :Spot
 cls
@@ -58,7 +66,7 @@ echo Installing
 curl https://download.spotify.com/SpotifyFullSetup.exe -o spot.exe
 cls
 start spot.exe
-GOTO end
+GOTO begining
 
 :vdsk
 cls
@@ -66,7 +74,7 @@ echo Installing
 curl https://download.vrdesktop.net/files/VirtualDesktop.Streamer.Setup.exe -o vdsk.exe
 cls
 start vdsk.exe
-del Parsec.zip
+GOTO begining
 
 :rblx
 cls
@@ -74,7 +82,7 @@ echo Installing
 curl https://setup.rbxcdn.com/version-c1236188328f4133-Roblox.exe -o rblx.exe
 cls
 start rblx.exe
-GOTO end
+GOTO begining
 
 :mine
 cls
@@ -82,19 +90,7 @@ echo Installing
 curl https://launcher.mojang.com/download/MinecraftInstaller.msi -o mine.msi
 cls
 start mine.msi
-GOTO end
-
-:psec
-cls
-echo Installing
-curl https://builds.parsecgaming.com/package/parsec-flat-windows32.zip -o Parsec.zip
-cls
-tar -xf Parsec.zip
-timeout 3 /NOBREAK > nul
-del Parsec.zip
-cd parsec
-start parsecd.exe
-GOTO end
+GOTO beginging 
 
 :end
 cls
@@ -104,6 +100,7 @@ echo (2) - Close App
 CHOICE /C 12 /M "Enter your choice:"
 IF ERRORLEVEL 2 GOTO close
 IF ERRORLEVEL 1 GOTO begining 
+pause
 
 :close
 cls
